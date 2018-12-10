@@ -1,1 +1,1 @@
-# mavericks
+# maveric
