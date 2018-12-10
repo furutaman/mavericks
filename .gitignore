@@ -1,4 +1,4 @@
-# 「.AppleDouble」フォルダを除外
+# 「node_modules」フォルダを除外
 node_modules/
 
 # 「.DS_Store」や「._.DS_Store」を除外
