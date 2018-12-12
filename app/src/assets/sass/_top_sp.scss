@@ -1,11 +1,9 @@
-$pc: "only screen and (min-width:769px) ";
+$pc: "only screen and (max-width:769px) ";
 
 @media #{$pc} {
-
-
 body{
-	
+	min-height: 100%;
+	height: 100%;
 }
-
 
 }
