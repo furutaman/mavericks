@@ -51,7 +51,7 @@ if($(window).width() > 768){
     }
     else if($(this).scrollTop() <= headerOffset.top && $(".header").hasClass('scrl') == true){
       $(".header").removeClass('scrl');
-      
+
     }
   });
 }
@@ -113,7 +113,7 @@ $(window).load(function(){
   if ($('#home').get(0)) {
     anime_time_init = 2400;
   }
-  
+
   setTimeout(function(){
 
     //------------------------
@@ -150,9 +150,9 @@ $(window).load(function(){
     $('.twitter').addClass('twitter-on');
     $('.instagram').addClass('instagram-on');
     $('.facebook').addClass('facebook-on');
-    
+
   },anime_time_init);
-  
+
 
   //------------------------
   // main content
@@ -223,7 +223,7 @@ $(window).load(function(){
       setTimeout(function(){
         $('.content').stop().addClass('fade-in-up');
       },anime_time02+400);
-      
+
     }
   });
 
@@ -255,7 +255,7 @@ $(window).load(function(){
       },anime_time02);
       setTimeout(function(){
         $('.produce').stop().addClass('fade-in-up-scale');
-      },anime_time02+300); 
+      },anime_time02+300);
       setTimeout(function(){
         $('.online').stop().addClass('fade-in-up-scale');
       },anime_time02+600);
@@ -264,7 +264,7 @@ $(window).load(function(){
       },anime_time02+900);
     }
   });
-  
+
 
   //------------------------
   // consultation
@@ -276,7 +276,7 @@ $(window).load(function(){
       },anime_time02-200);
       setTimeout(function(){
         $('.consultation-txt').stop().addClass('fade-in-up');
-      },anime_time02); 
+      },anime_time02);
       setTimeout(function(){
         $('.consultation .btn').stop().addClass('fade-in-up');
       },anime_time02+200);
@@ -289,7 +289,7 @@ $(window).load(function(){
   //------------------------
   $('.post-main').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
     if(isInView){
-     
+
         $('.post-main-txt01').stop().addClass('fade-in-up');
         $('.post-main-txt02').stop().addClass('fade-in-up');
 
@@ -347,7 +347,7 @@ $(window).load(function(){
       },anime_time02+400);
     }
   });
-  
+
 
 });
 
