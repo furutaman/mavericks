@@ -1,0 +1,77 @@
+$pc:  "only screen and (min-width:768px)";
+$color-base: #1f2844;
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  font-family: '游ゴシック Medium', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif;
+}
+
+header {
+  position: relative;
+  margin: 72px 0 0 0;
+  padding: 0 66px;
+}
+.logo {
+  float: left;
+  img {
+    height: 50px;
+  }
+}
+
+/* グローバルナビ */
+.gn {
+  position: relative;
+  float: right;
+  margin: 13px 0 0 0;
+}
+.gn_list {}
+.gn_list_item {
+    float: left;
+    a {
+      display: inline-block;
+      margin: 0 7px;
+      font-size: 1.3rem;
+      letter-spacing: 0.15em;
+    }
+}
+.gn_list_item.twitter {
+  position: absolute;
+  right: 75px;
+  bottom: -45px;
+  img {
+    height: 26px;
+  }
+}
+.gn_list_item.fb {
+  position: absolute;
+  right: 39px;
+  bottom: -45px;
+  img {
+    height: 26px;
+  }
+}
+.gn_list_item.insta {
+  position: absolute;
+  right: 3px;
+  bottom: -45px;
+  img {
+    height: 26px;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media #{$pc} {
+}

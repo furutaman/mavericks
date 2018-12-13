@@ -1,6 +1,6 @@
-$pc: "only screen and (max-width:769px) ";
+$sp: "only screen and (max-width:769px) ";
 
-@media #{$pc} {
+@media #{$sp} {
 body{
 	min-height: 100%;
 	height: 100%;
