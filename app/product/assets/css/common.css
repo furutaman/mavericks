@@ -967,6 +967,14 @@ address {
   color: #fff;
 }
 
+@font-face {
+  font-family: 'futura_bk_btbook';
+  src: url("fonts/futura_book_font-webfont.eot");
+  src: url("fonts/futura_book_font-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/futura_book_font-webfont.woff2") format("woff2"), url("fonts/futura_book_font-webfont.woff") format("woff"), url("fonts/futura_book_font-webfont.ttf") format("truetype"), url("fonts/futura_book_font-webfont.svg#futura_bk_btbook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -998,11 +1006,11 @@ header {
   margin: 13px 0 0 0;
 }
 
-.gn_list_item {
+.gn li {
   float: left;
 }
 
-.gn_list_item a {
+.gn li a {
   display: inline-block;
   margin: 0 7px;
   font-size: 13px;
@@ -1010,34 +1018,43 @@ header {
   letter-spacing: 0.15em;
 }
 
-.gn_list_item.twitter {
+.gn_twitter {
   position: absolute;
   right: 75px;
   bottom: -45px;
 }
 
-.gn_list_item.twitter img {
+.gn_twitter img {
   height: 26px;
 }
 
-.gn_list_item.fb {
+.gn_fb {
   position: absolute;
   right: 39px;
   bottom: -45px;
 }
 
-.gn_list_item.fb img {
+.gn_fb img {
   height: 26px;
 }
 
-.gn_list_item.insta {
+.gn_insta {
   position: absolute;
   right: 3px;
   bottom: -45px;
 }
 
-.gn_list_item.insta img {
+.gn_insta img {
   height: 26px;
+}
+
+.svg_mail {
+  width: 35px;
+  height: 26px;
+}
+
+.svg_mail_use {
+  fill: #a1a1a1;
 }
 
 @media only screen and (max-width: 769px) {
@@ -1046,26 +1063,71 @@ header {
     height: 100%;
   }
   header {
-    margin: 20px 0 0 0;
-    padding: 0 20px;
+    margin: 10px 0 0 0;
+    padding: 0 10px;
   }
   .logo {
     float: left;
+    margin: 0;
   }
   .logo img {
     height: 35px;
   }
   /* グローバルナビ */
   .gn {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    border: solid 15px #fff;
+    background: #1f2844;
+  }
+  .gn li {
+    float: none;
+    text-align: center;
+    line-height: 3;
+  }
+  .gn li a {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  .gn_twitter,
+  .gn_fb,
+  .gn_insta {
+    position: static;
+  }
+  .gn_twitter img,
+  .gn_fb img,
+  .gn_insta img {
+    vertical-align: middle;
+  }
+  .gn_mail {
+    margin: 10px 0 0;
+  }
+  .svg_mail_use {
+    fill: #fff;
   }
   /* ハンバーガーアイコン */
   .hamburger {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 10px;
-    width: 35px;
-    height: 35px;
+    right: 0;
+    width: 50px;
+    height: 50px;
     background: #1f2844;
+  }
+  .hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+  }
+  .hamburger span:nth-child(1) {
+    margin-top: -8px;
+  }
+  .hamburger span:nth-child(3) {
+    margin-top: 8px;
   }
 }
