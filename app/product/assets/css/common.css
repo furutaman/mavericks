@@ -1057,6 +1057,18 @@ header {
   fill: #a1a1a1;
 }
 
+.svg_twitter_use {
+  fill: #a1a1a1;
+}
+
+.svg_fb_use {
+  fill: #a1a1a1;
+}
+
+.svg_insta_use {
+  fill: #a1a1a1;
+}
+
 @media only screen and (max-width: 769px) {
   body {
     min-height: 100%;
@@ -1102,9 +1114,15 @@ header {
     vertical-align: middle;
   }
   .gn_mail {
+    margin: 14px 0 0;
+  }
+  .gn_twitter {
     margin: 10px 0 0;
   }
-  .svg_mail_use {
+  .svg_mail_use,
+  .svg_twitter_use,
+  .svg_fb_use,
+  .svg_insta_use {
     fill: #fff;
   }
   /* ハンバーガーアイコン */

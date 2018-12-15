@@ -45,9 +45,16 @@ header {
 	}
 }
 .gn_mail {
+	margin: 14px 0 0;
+}
+.gn_twitter {
 	margin: 10px 0 0;
 }
-.svg_mail_use {
+.svg_mail_use,
+.svg_twitter_use,
+.svg_fb_use,
+.svg_insta_use
+{
 	fill: #fff;
 }
 
@@ -74,7 +81,6 @@ header {
 		margin-top: 8px;
 	}
 }
-
 
 
 
