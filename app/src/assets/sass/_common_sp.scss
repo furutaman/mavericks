@@ -25,6 +25,7 @@ header {
 	right: 0;
 	padding: 15px;
 	border: solid 15px #fff;
+	// border-bottom: solid 60px #fff;
 	background: $color-base;
 }
 .gn li{
@@ -32,7 +33,7 @@ header {
 	text-align: center;
 	line-height: 3;
 	a {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 		color: #fff;
 	}
 }
@@ -53,27 +54,42 @@ header {
 .svg_mail_use,
 .svg_twitter_use,
 .svg_fb_use,
-.svg_insta_use
-{
+.svg_insta_use {
 	fill: #fff;
 }
 
-/* ハンバーガーアイコン */
-.hamburger {
+/* オーバーレイ */
+.overlay {
+  display: block;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31,40,40,0.2);
+}
+
+/* ハンバーガーアイコン */
+.nav-box {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.nav-box_hamburger {
+	display: block;
+	position: relative;
   width: 50px;
   height: 50px;
   background: $color-base;
 }
-.hamburger span {
+.nav-box_hamburger span {
 	position: absolute;
 	top: 50%;
 	left: 10px;
 	width: 30px;
 	height: 1px;
 	background: #fff;
+	transition: .3s;
 	&:nth-child(1) {
 		margin-top: -8px;
 	}
@@ -81,7 +97,80 @@ header {
 		margin-top: 8px;
 	}
 }
+.nav-box_hamburger.on span {
+	&:nth-child(1) {
+		margin-top: 0px;
+		transform: rotate(45deg);
+	}
+	&:nth-child(2) {
+		display: none;
+	}
+	&:nth-child(3) {
+		margin-top: 0px;
+		transform: rotate(-45deg);
+	}
+}
 
+/* TOTOP */
+.nav-box_totop {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border: solid 1px $color-base;
+	background: #fff;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 13px;
+		left: 24px;
+		width: 1px;
+		height: 23px;
+		background: $color-base;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 14px;
+		left: 18px;
+		width: 12px;
+		height: 12px;
+		border-top: 1px solid $color-base;
+		border-right: 1px solid $color-base;
+		transform: rotate(-45deg);
+	}
+}
+
+/* SNSボタン（nav-box） */
+.nav-box_sns {
+	width: 50px;
+	padding: 10px 0 10px;
+	text-align: center;
+	border: solid 1px $color-base;
+	border-top: none;
+	background: #fff;
+	a {
+		display: block;
+		margin-top: 5px;
+	}
+}
+.svg_twitter_use--side,
+.svg_fb_use--side,
+.svg_insta_use--side {
+	fill: #a1a1a1;
+}
+
+/* ハンドル */
+.nav-box_handle {
+	display: block;
+	width: 50px;
+	height: 20px;
+	border: solid 1px $color-base;
+	border-top: none;
+	background: url('../img/icon_handle.svg') no-repeat #fff;;
+	background-position: center center;
+	background-size: 30px 6px;
+}
 
 
 }

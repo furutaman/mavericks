@@ -969,8 +969,8 @@ address {
 
 @font-face {
   font-family: 'futura_bk_btbook';
-  src: url("fonts/futura_book_font-webfont.eot");
-  src: url("fonts/futura_book_font-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/futura_book_font-webfont.woff2") format("woff2"), url("fonts/futura_book_font-webfont.woff") format("woff"), url("fonts/futura_book_font-webfont.ttf") format("truetype"), url("fonts/futura_book_font-webfont.svg#futura_bk_btbook") format("svg");
+  src: url("../fonts/futura_book_font-webfont.eot");
+  src: url("../fonts/futura_book_font-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/futura_book_font-webfont.woff2") format("woff2"), url("../fonts/futura_book_font-webfont.woff") format("woff"), url("../fonts/futura_book_font-webfont.ttf") format("truetype"), url("../fonts/futura_book_font-webfont.svg#futura_bk_btbook") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1013,9 +1013,10 @@ header {
 .gn li a {
   display: inline-block;
   margin: 0 7px;
-  font-size: 13px;
-  font-size: 1.3rem;
+  font-size: 15px;
+  font-size: 1.5rem;
   letter-spacing: 0.15em;
+  font-family: 'futura_bk_btbook';
 }
 
 .gn_twitter {
@@ -1069,6 +1070,62 @@ header {
   fill: #a1a1a1;
 }
 
+/* footer */
+footer {
+  padding: 60px 0 10px;
+  background: #1f2844;
+}
+
+.logo--footer {
+  text-align: center;
+}
+
+.logo--footer img {
+  width: 150px;
+}
+
+.footer_sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px 0 0;
+}
+
+.footer_sns li {
+  margin: 0 4px;
+}
+
+.footer_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 33px 0 0;
+}
+
+.footer_nav li {
+  margin: 0 5px;
+}
+
+.footer_nav li a {
+  font-size: 10px;
+  font-size: 1.0rem;
+  color: #fff;
+}
+
+address {
+  margin: 20px 0 0;
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  font-size: 1.0rem;
+}
+
 @media only screen and (max-width: 769px) {
   body {
     min-height: 100%;
@@ -1100,7 +1157,7 @@ header {
     line-height: 3;
   }
   .gn li a {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #fff;
   }
   .gn_twitter,
@@ -1125,27 +1182,119 @@ header {
   .svg_insta_use {
     fill: #fff;
   }
+  /* オーバーレイ */
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 40, 40, 0.2);
+  }
   /* ハンバーガーアイコン */
-  .hamburger {
+  .nav-box {
     position: fixed;
     top: 0;
     right: 0;
+  }
+  .nav-box_hamburger {
+    display: block;
+    position: relative;
     width: 50px;
     height: 50px;
     background: #1f2844;
   }
-  .hamburger span {
+  .nav-box_hamburger span {
     position: absolute;
     top: 50%;
     left: 10px;
     width: 30px;
     height: 1px;
     background: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
-  .hamburger span:nth-child(1) {
+  .nav-box_hamburger span:nth-child(1) {
     margin-top: -8px;
   }
-  .hamburger span:nth-child(3) {
+  .nav-box_hamburger span:nth-child(3) {
     margin-top: 8px;
+  }
+  .nav-box_hamburger.on span:nth-child(1) {
+    margin-top: 0px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .nav-box_hamburger.on span:nth-child(2) {
+    display: none;
+  }
+  .nav-box_hamburger.on span:nth-child(3) {
+    margin-top: 0px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  /* TOTOP */
+  .nav-box_totop {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #1f2844;
+    background: #fff;
+  }
+  .nav-box_totop:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 24px;
+    width: 1px;
+    height: 23px;
+    background: #1f2844;
+  }
+  .nav-box_totop:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #1f2844;
+    border-right: 1px solid #1f2844;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  /* SNSボタン（nav-box） */
+  .nav-box_sns {
+    width: 50px;
+    padding: 10px 0 10px;
+    text-align: center;
+    border: solid 1px #1f2844;
+    border-top: none;
+    background: #fff;
+  }
+  .nav-box_sns a {
+    display: block;
+    margin-top: 5px;
+  }
+  .svg_twitter_use--side,
+  .svg_fb_use--side,
+  .svg_insta_use--side {
+    fill: #a1a1a1;
+  }
+  /* ハンドル */
+  .nav-box_handle {
+    display: block;
+    width: 50px;
+    height: 20px;
+    border: solid 1px #1f2844;
+    border-top: none;
+    background: url("../img/icon_handle.svg") no-repeat #fff;
+    background-position: center center;
+    -webkit-background-size: 30px 6px;
+            background-size: 30px 6px;
   }
 }

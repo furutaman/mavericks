@@ -23,11 +23,14 @@
   window.jQuery || document.write(‘<script src="/assets/js/jquery-2.2.4.min.js"><\/script>’)
 </script>
 </head>
+
 <body>
-<div class="overlay"><div>
+<div class="overlay"></div>
 <div class="wrapper">
+
+<!-- Header -->
 <header class="u-clearfix">
-  <h1 class="logo"><a href="#"><img src="/assets/img/logo.png" alt="札幌ホームページ制作会社 - MAVERICKS（マーベリックス）-"></a></h1>
+  <h1 class="logo"><a href="#"><img src="/assets/img/logo.svg" alt="札幌ホームページ制作会社 - MAVERICKS（マーベリックス）-"></a></h1>
   <nav class="gn">
     <ul>
       <li><a href="#">Home</a></li>
@@ -62,14 +65,70 @@
         </a></li>
     </ul>
   </nav>
-  <button class="hamburger">
+</header>
+
+<!-- Nav Box -->
+<nav class="nav-box">
+  <button class="nav-box_hamburger on">
     <span></span>
     <span></span>
     <span></span>
   </button>
-</header>
+  <button class="nav-box_totop"></button>
+  <div class="nav-box_sns">
+    <a href="#">
+      <svg width="26px" height="26px" viewBox="0 0 26 26">
+        <use class='svg_twitter_use--side' xlink:href='/assets/img/icon_twitter.svg#IconTwitter'></use>
+      </svg>
+    </a>
+    <a href="#">
+      <svg width="26px" height="26px" viewBox="0 0 26 26">
+        <use class='svg_fb_use--side' xlink:href='/assets/img/icon_fb.svg#IconFb'></use>
+      </svg>
+    </a>
+    <a href="#">
+      <svg width="26px" height="26px" viewBox="0 0 26 26">
+        <use class='svg_insta_use--side' xlink:href='/assets/img/icon_insta.svg#IconInsta'></use>
+      </svg>
+    </a>
+  </div>
+  <button class="nav-box_handle">
+  </button>
+</nav>
 
-</div>
+
+
+<footer>
+  <div class="logo--footer"><img src="/assets/img/logo_white.svg" alt="札幌ホームページ制作会社 - MAVERICKS（マーベリックス）-"></div>
+  <ul class="footer_sns">
+    <li class="footer_sns--twitter">
+      <a href="#">
+        <svg width="26px" height="26px" viewBox="0 0 26 26">
+          <use class='svg_twitter_use' xlink:href='/assets/img/icon_twitter.svg#IconTwitter'></use>
+        </svg>
+      </a></li>
+    <li class="footer_sns--fb">
+      <a href="#">
+        <svg width="26px" height="26px" viewBox="0 0 26 26">
+          <use class='svg_fb_use' xlink:href='/assets/img/icon_fb.svg#IconFb'></use>
+        </svg>
+      </a></li>
+    <li class="footer_sns--insta">
+      <a href="#">
+        <svg width="26px" height="26px" viewBox="0 0 26 26">
+          <use class='svg_insta_use' xlink:href='/assets/img/icon_insta.svg#IconInsta'></use>
+        </svg>
+      </a></li>
+  </ul>
+  <ul class="footer_nav">
+    <li><a href="#">会社概要</a></li>
+    <li><a href="#">プライバシーポリシー</a></li>
+    <li><a href="#">お問い合わせ</a></li>
+  </ul>
+  <address>&copy;Mavericks</address>
+</footer>
+</div><!-- /wrapper -->
+<script defer src="/assets/js/svgxuse.min.js"></script>
 <script src="/assets/js/common.js" charset="UTF-8"></script>
 </body>
 </html>
