@@ -999,7 +999,22 @@ header {
   height: 50px;
 }
 
-/* グローバルナビ */
+/* -------
+オーバーレイ
+------- */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 40, 40, 0.2);
+}
+
+/* -------
+グローバルナビ
+------- */
 .gn {
   position: relative;
   float: right;
@@ -1070,7 +1085,238 @@ header {
   fill: #a1a1a1;
 }
 
-/* footer */
+/* -------
+グローバルナビ（クローン）
+------- */
+.gn--clone {
+  position: fixed;
+  top: 0;
+  right: -150px;
+  padding: 30px;
+  margin: 13px 0 0 0;
+  border: solid 15px #fff;
+  background: #1f2844;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.gn--clone.active {
+  right: 0;
+}
+
+.gn--clone li {
+  text-align: center;
+  line-height: 3;
+}
+
+.gn--clone li a {
+  display: inline-block;
+  margin: 0 7px;
+  font-size: 13px;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  color: #fff;
+  font-family: 'futura_bk_btbook';
+}
+
+.gn--clone .gn_twitter {
+  position: static;
+}
+
+.gn--clone .gn_twitter img {
+  height: 26px;
+  vertical-align: middle;
+}
+
+.gn--clone .gn_fb {
+  position: static;
+}
+
+.gn--clone .gn_fb img {
+  height: 26px;
+  vertical-align: middle;
+}
+
+.gn--clone .gn_insta {
+  position: static;
+}
+
+.gn--clone .gn_insta img {
+  height: 26px;
+  vertical-align: middle;
+}
+
+.gn--clone .gn_mail {
+  margin: 14px 0 0;
+}
+
+.gn--clone .gn_twitter {
+  margin: 10px 0 0;
+}
+
+.gn--clone .svg_mail_use,
+.gn--clone .svg_twitter_use,
+.gn--clone .svg_fb_use,
+.gn--clone .svg_insta_use {
+  fill: #fff;
+}
+
+/* -------
+NavBox, ハンバーガーアイコン
+------- */
+.nav-box {
+  position: fixed;
+  top: 0;
+  right: -50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-box.active {
+  right: 0;
+}
+
+.nav-box_hamburger {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #1f2844;
+}
+
+.nav-box_hamburger span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-box_hamburger span:nth-child(1) {
+  margin-top: -8px;
+}
+
+.nav-box_hamburger span:nth-child(3) {
+  margin-top: 8px;
+}
+
+.nav-box_hamburger.active span:nth-child(1) {
+  margin-top: 0px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-box_hamburger.active span:nth-child(2) {
+  display: none;
+}
+
+.nav-box_hamburger.active span:nth-child(3) {
+  margin-top: 0px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* -------
+TOTOP
+------- */
+.nav-box_totop {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #1f2844;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-box_totop:before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 24px;
+  width: 1px;
+  height: 23px;
+  background: #1f2844;
+}
+
+.nav-box_totop:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid #1f2844;
+  border-right: 1px solid #1f2844;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.nav-box_totop.inactive {
+  display: none;
+}
+
+/* -------
+SNSボタン（nav-box）
+------- */
+.nav-box_sns {
+  display: block;
+  width: 50px;
+  padding: 10px 0 10px;
+  text-align: center;
+  border: solid 1px #1f2844;
+  border-top: none;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-box_sns a {
+  display: block;
+  margin-top: 5px;
+}
+
+.nav-box_sns.inactive {
+  display: none;
+}
+
+.svg_twitter_use--side,
+.svg_fb_use--side,
+.svg_insta_use--side {
+  fill: #a1a1a1;
+}
+
+/* -------
+ハンドル
+------- */
+.nav-box_handle {
+  display: block;
+  width: 50px;
+  height: 20px;
+  border: solid 1px #1f2844;
+  border-top: none;
+  background: url("../img/icon_handle.svg") no-repeat #fff;
+  background-position: center center;
+  -webkit-background-size: 30px 6px;
+          background-size: 30px 6px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-box_handle.inactive {
+  display: none;
+}
+
+/* -------
+footer
+------- */
 footer {
   padding: 60px 0 10px;
   background: #1f2844;
@@ -1118,6 +1364,12 @@ footer {
   color: #fff;
 }
 
+.svg_twitter_use--footer,
+.svg_fb_use--footer,
+.svg_insta_use--footer {
+  fill: #fff;
+}
+
 address {
   margin: 20px 0 0;
   text-align: center;
@@ -1126,7 +1378,7 @@ address {
   font-size: 1.0rem;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   body {
     min-height: 100%;
     height: 100%;
@@ -1142,159 +1394,21 @@ address {
   .logo img {
     height: 35px;
   }
-  /* グローバルナビ */
+  /* -------
+グローバルナビ
+------- */
   .gn {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 15px;
-    border: solid 15px #fff;
-    background: #1f2844;
-  }
-  .gn li {
-    float: none;
-    text-align: center;
-    line-height: 3;
-  }
-  .gn li a {
-    font-size: 1.3rem;
-    color: #fff;
-  }
-  .gn_twitter,
-  .gn_fb,
-  .gn_insta {
-    position: static;
-  }
-  .gn_twitter img,
-  .gn_fb img,
-  .gn_insta img {
-    vertical-align: middle;
-  }
-  .gn_mail {
-    margin: 14px 0 0;
-  }
-  .gn_twitter {
-    margin: 10px 0 0;
-  }
-  .svg_mail_use,
-  .svg_twitter_use,
-  .svg_fb_use,
-  .svg_insta_use {
-    fill: #fff;
-  }
-  /* オーバーレイ */
-  .overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(31, 40, 40, 0.2);
-  }
-  /* ハンバーガーアイコン */
-  .nav-box {
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-  .nav-box_hamburger {
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background: #1f2844;
-  }
-  .nav-box_hamburger span {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    width: 30px;
-    height: 1px;
-    background: #fff;
-    -webkit-transition: .3s;
-    transition: .3s;
-  }
-  .nav-box_hamburger span:nth-child(1) {
-    margin-top: -8px;
-  }
-  .nav-box_hamburger span:nth-child(3) {
-    margin-top: 8px;
-  }
-  .nav-box_hamburger.on span:nth-child(1) {
-    margin-top: 0px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .nav-box_hamburger.on span:nth-child(2) {
     display: none;
   }
-  .nav-box_hamburger.on span:nth-child(3) {
-    margin-top: 0px;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+  /* -------
+ハンバーガーアイコン
+------- */
+  .nav-box {
+    right: 0;
   }
-  /* TOTOP */
-  .nav-box_totop {
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border: solid 1px #1f2844;
-    background: #fff;
-  }
-  .nav-box_totop:before {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 24px;
-    width: 1px;
-    height: 23px;
-    background: #1f2844;
-  }
-  .nav-box_totop:after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    left: 18px;
-    width: 12px;
-    height: 12px;
-    border-top: 1px solid #1f2844;
-    border-right: 1px solid #1f2844;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  /* SNSボタン（nav-box） */
-  .nav-box_sns {
-    width: 50px;
-    padding: 10px 0 10px;
-    text-align: center;
-    border: solid 1px #1f2844;
-    border-top: none;
-    background: #fff;
-  }
-  .nav-box_sns a {
-    display: block;
-    margin-top: 5px;
-  }
-  .svg_twitter_use--side,
-  .svg_fb_use--side,
-  .svg_insta_use--side {
-    fill: #a1a1a1;
-  }
-  /* ハンドル */
+  .nav-box_totop,
+  .nav-box_sns,
   .nav-box_handle {
-    display: block;
-    width: 50px;
-    height: 20px;
-    border: solid 1px #1f2844;
-    border-top: none;
-    background: url("../img/icon_handle.svg") no-repeat #fff;
-    background-position: center center;
-    -webkit-background-size: 30px 6px;
-            background-size: 30px 6px;
+    display: none;
   }
 }

@@ -25,13 +25,13 @@
 </head>
 
 <body>
-<div class="overlay"></div>
-<div class="wrapper">
+<div id="js-overlay" class="overlay"></div>
+<div id="wrapper" class="wrapper">
 
 <!-- Header -->
 <header class="u-clearfix">
   <h1 class="logo"><a href="#"><img src="/assets/img/logo.svg" alt="札幌ホームページ制作会社 - MAVERICKS（マーベリックス）-"></a></h1>
-  <nav class="gn">
+  <nav id="js-gn" class="gn">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Concept</a></li>
@@ -65,17 +65,18 @@
         </a></li>
     </ul>
   </nav>
+  <nav id="js-gn--clone" class="gn--clone"></nav>
 </header>
 
 <!-- Nav Box -->
-<nav class="nav-box">
-  <button class="nav-box_hamburger on">
+<nav id="js-nav-box" class="nav-box">
+  <button id="js-hamburger" class="nav-box_hamburger">
     <span></span>
     <span></span>
     <span></span>
   </button>
-  <button class="nav-box_totop"></button>
-  <div class="nav-box_sns">
+  <button id="js-totop" class="nav-box_totop"></button>
+  <div id="js-nav-box_sns" class="nav-box_sns">
     <a href="#">
       <svg width="26px" height="26px" viewBox="0 0 26 26">
         <use class='svg_twitter_use--side' xlink:href='/assets/img/icon_twitter.svg#IconTwitter'></use>
@@ -92,9 +93,12 @@
       </svg>
     </a>
   </div>
-  <button class="nav-box_handle">
-  </button>
+  <button id="js-handle" class="nav-box_handle"></button>
 </nav>
+
+<main id="js-main">
+  <p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p><p>Lorem ipsum</p>
+</main>
 
 
 
@@ -104,19 +108,19 @@
     <li class="footer_sns--twitter">
       <a href="#">
         <svg width="26px" height="26px" viewBox="0 0 26 26">
-          <use class='svg_twitter_use' xlink:href='/assets/img/icon_twitter.svg#IconTwitter'></use>
+          <use class='svg_twitter_use--footer' xlink:href='/assets/img/icon_twitter.svg#IconTwitter'></use>
         </svg>
       </a></li>
     <li class="footer_sns--fb">
       <a href="#">
         <svg width="26px" height="26px" viewBox="0 0 26 26">
-          <use class='svg_fb_use' xlink:href='/assets/img/icon_fb.svg#IconFb'></use>
+          <use class='svg_fb_use--footer' xlink:href='/assets/img/icon_fb.svg#IconFb'></use>
         </svg>
       </a></li>
     <li class="footer_sns--insta">
       <a href="#">
         <svg width="26px" height="26px" viewBox="0 0 26 26">
-          <use class='svg_insta_use' xlink:href='/assets/img/icon_insta.svg#IconInsta'></use>
+          <use class='svg_insta_use--footer' xlink:href='/assets/img/icon_insta.svg#IconInsta'></use>
         </svg>
       </a></li>
   </ul>

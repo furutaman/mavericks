@@ -1,4 +1,4 @@
-$pc:  "only screen and (min-width:768px)";
+$pc:  "only screen and (min-width:769px)";
 $color-base: #1f2844;
 
 
@@ -36,7 +36,23 @@ header {
   }
 }
 
-/* グローバルナビ */
+
+/* -------
+オーバーレイ
+------- */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31,40,40,0.2);
+}
+
+/* -------
+グローバルナビ
+------- */
 .gn {
   position: relative;
   float: right;
@@ -95,9 +111,200 @@ header {
 }
 
 
+/* -------
+グローバルナビ（クローン）
+------- */
+.gn--clone {
+  position: fixed;
+  top: 0;
+  right: -150px;
+  padding: 30px;
+  margin: 13px 0 0 0;
+  border: solid 15px #fff;
+  background: $color-base;
+	transition: .3s;
+}
+.gn--clone.active {
+  right: 0;
+}
+.gn--clone li {
+    text-align: center;
+    line-height: 3;
+    a {
+      display: inline-block;
+      margin: 0 7px;
+      font-size: 1.3rem;
+      letter-spacing: 0.15em;
+      color: #fff;
+      font-family: 'futura_bk_btbook';
+    }
+}
+.gn--clone .gn_twitter {
+  position: static;
+  img {
+    height: 26px;
+    vertical-align: middle;
+  }
+}
+.gn--clone .gn_fb {
+  position: static;
+  img {
+    height: 26px;
+    vertical-align: middle;
+  }
+}
+.gn--clone .gn_insta {
+  position: static;
+  img {
+    height: 26px;
+    vertical-align: middle;
+  }
+}
+.gn--clone .gn_mail {
+	margin: 14px 0 0;
+}
+.gn--clone .gn_twitter {
+	margin: 10px 0 0;
+}
+.gn--clone .svg_mail_use,
+.gn--clone .svg_twitter_use,
+.gn--clone .svg_fb_use,
+.gn--clone .svg_insta_use {
+	fill: #fff;
+}
+
+/* -------
+NavBox, ハンバーガーアイコン
+------- */
+.nav-box {
+	position: fixed;
+	top: 0;
+	right: -50px;
+  transition: .3s;
+}
+.nav-box.active {
+  right: 0;
+}
+.nav-box_hamburger {
+	display: block;
+	position: relative;
+  width: 50px;
+  height: 50px;
+  background: $color-base;
+}
+.nav-box_hamburger span {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 30px;
+	height: 1px;
+	background: #fff;
+	transition: .3s;
+	&:nth-child(1) {
+		margin-top: -8px;
+	}
+	&:nth-child(3) {
+		margin-top: 8px;
+	}
+}
+.nav-box_hamburger.active span {
+	&:nth-child(1) {
+		margin-top: 0px;
+		transform: rotate(45deg);
+	}
+	&:nth-child(2) {
+		display: none;
+	}
+	&:nth-child(3) {
+		margin-top: 0px;
+		transform: rotate(-45deg);
+	}
+}
+
+/* -------
+TOTOP
+------- */
+.nav-box_totop {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border: solid 1px $color-base;
+	background: #fff;
+  transition: .3s;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 13px;
+		left: 24px;
+		width: 1px;
+		height: 23px;
+		background: $color-base;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 14px;
+		left: 18px;
+		width: 12px;
+		height: 12px;
+		border-top: 1px solid $color-base;
+		border-right: 1px solid $color-base;
+		transform: rotate(-45deg);
+	}
+}
+.nav-box_totop.inactive {
+  display: none;
+}
+
+/* -------
+SNSボタン（nav-box）
+------- */
+.nav-box_sns {
+	display: block;
+	width: 50px;
+	padding: 10px 0 10px;
+	text-align: center;
+	border: solid 1px $color-base;
+	border-top: none;
+	background: #fff;
+  transition: .3s;
+	a {
+		display: block;
+		margin-top: 5px;
+	}
+}
+.nav-box_sns.inactive {
+  display: none;
+}
+.svg_twitter_use--side,
+.svg_fb_use--side,
+.svg_insta_use--side {
+	fill: #a1a1a1;
+}
+
+/* -------
+ハンドル
+------- */
+.nav-box_handle {
+	display: block;
+	width: 50px;
+	height: 20px;
+	border: solid 1px $color-base;
+	border-top: none;
+	background: url('../img/icon_handle.svg') no-repeat #fff;;
+	background-position: center center;
+	background-size: 30px 6px;
+  transition: .3s;
+}
+.nav-box_handle.inactive {
+  display: none;
+}
 
 
-/* footer */
+/* -------
+footer
+------- */
 footer {
   padding: 60px 0 10px;
   background: $color-base;
@@ -127,6 +334,11 @@ footer {
       color: #fff;
     }
   }
+}
+.svg_twitter_use--footer,
+.svg_fb_use--footer,
+.svg_insta_use--footer {
+  fill: #fff;
 }
 address {
   margin: 20px 0 0;
