@@ -982,7 +982,7 @@ html {
 body {
   color: #333;
   line-height: 1.6;
-  font-family: '游ゴシック Medium', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
 }
 
 header {
@@ -1091,7 +1091,7 @@ header {
 .gn--clone {
   position: fixed;
   top: 0;
-  right: -150px;
+  right: -165px;
   padding: 30px;
   margin: 13px 0 0 0;
   border: solid 15px #fff;

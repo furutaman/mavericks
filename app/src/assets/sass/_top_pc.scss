@@ -1,4 +1,161 @@
-$pc:  "only screen and (min-width:768px)";
+$pc:  "only screen and (min-width:769px)";
+$color-base: #1f2844;
+
+
+/* -------
+共通
+------- */
+h2 {
+  font-family: 'futura_bk_btbook';
+}
+
+
+/* -------
+メインイメージ
+------- */
+.wrap_main-img {
+  padding: 0 40px;
+}
+.main-img {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  margin: 45px 0 0;
+  background: url('../img/img_main.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-img_info {
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ width: 520px;
+ background: #fff;
+ font-size: 1.3rem;
+}
+.arrow_downward {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 64px;
+  float: left;
+  border: solid 1px $color-base;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    width: 2px;
+    height: 16px;
+    background: $color-base;
+    transform: scaleX(.5);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border: solid 3px transparent;
+    border-top: solid 6px $color-base;
+  }
+}
+.main-img_info dt {
+  display: block;
+  float: left;
+  width: 110px;
+  height: 64px;
+  border: solid 1px $color-base;
+  border-left: none;
+  text-align: center;
+  line-height: 64px;
+}
+.main-img_info dd {
+  display: block;
+  float: left;
+  width: 365px;
+  height: 64px;
+  padding: 0 0 0 15px;
+  border: solid 1px $color-base;
+  border-left: none;
+  line-height: 64px;
+}
+
+
+/* -------
+コンセプト
+------- */
+.wrap_concept {
+  margin: 40px 0 0;
+  padding: 40px;
+  p {
+    text-align: center;
+  }
+}
+.title_concept {
+  margin: 0 0 0 30px;
+  padding: 13px 0 13px 25px;
+  border-left: solid 3px $color-base;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.concept_logo {
+  margin: 30px 0 0;
+  img {
+    width: 153px;
+  }
+}
+.concept_catch--main {
+  margin: 60px 0 0;
+  font-size: 4.4rem;
+  font-weight: bold;
+}
+.concept_catch--sub {
+  margin: 40px 0 0;
+  font-size: 1.8rem;
+  font-family: serif;
+  letter-spacing: 0.1em;
+}
+.concept_lead {
+  margin: 30px 0 0;
+  font-size: 1.5rem;
+  line-height: 2.0;
+  letter-spacing: 0.1em;
+}
+.btn_more {
+  position: relative;
+  display: block;
+  width: 164px;
+  height: 40px;
+  margin: 80px auto 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  font-family: 'futura_bk_btbook';
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-left: solid 1px $color-base;
+    border-bottom: solid 1px $color-base;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-top: solid 1px $color-base;
+    border-right: solid 1px $color-base;
+  }
+}
+
 
 @media #{$pc} {
 
