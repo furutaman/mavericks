@@ -23,6 +23,11 @@ body {
   line-height: 1.6;
   font-family: '游ゴシック Medium', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif;
 }
+#js-body.fixed {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
 
 header {
   position: relative;

@@ -15,13 +15,16 @@ jQuery(function($){
 jQuery(function($){
 
   var check = 0;
-  var current_scrollY;
+  var scrollpos;
 
   $('#js-hamburger, #js-overlay').on('click', function(){
 
-    current_scrollY = $( window ).scrollTop();
-
     if(check == 0){
+      scrollpos = $(window).scrollTop();
+      $('#js-body').addClass('fixed');
+      $('#js-body').css({
+        'top': -scrollpos
+      });
       $('#js-hamburger').addClass('active');
       $('#js-gn--clone').addClass('active');
       $('#js-overlay').show();
@@ -30,6 +33,8 @@ jQuery(function($){
       $('#js-handle').addClass('inactive');
       check = 1;
     }else if(check == 1){
+      $('#js-body').removeClass('fixed');
+      $(window).scrollTop(scrollpos);
       $('#js-hamburger').removeClass('active');
       $('#js-gn--clone').removeClass('active');
       $('#js-overlay').hide();
@@ -38,6 +43,8 @@ jQuery(function($){
       $('#js-handle').removeClass('inactive');
       check = 0;
     }
+
+    console.log(scrollpos);
   });
 
 });
