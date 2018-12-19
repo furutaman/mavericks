@@ -54,7 +54,7 @@ h2 {
   position: relative;
   width: 100%;
   height: 750px;
-  margin: 45px 0 0;
+  margin: 50px 0 0;
   background: url("../img/img_main.jpg") no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
@@ -130,8 +130,7 @@ h2 {
 コンセプト
 ------- */
 .wrap_concept {
-  margin: 40px 0 0;
-  padding: 40px;
+  margin: 80px 0 100px;
 }
 
 .wrap_concept p {
@@ -139,7 +138,7 @@ h2 {
 }
 
 .title_concept {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 70px;
   padding: 13px 0 13px 25px;
   border-left: solid 3px #1f2844;
   font-size: 25.6px;
@@ -191,7 +190,7 @@ h2 {
   top: 0;
   left: 0;
   width: 85%;
-  height: 350px;
+  height: 500px;
   background: url("../img/img_member.jpg") no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
@@ -203,9 +202,9 @@ h2 {
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -20px;
   width: 200px;
-  height: 350px;
+  height: 500px;
   background: #fff;
   -webkit-transform: skewX(-15deg) translateX(50px);
       -ms-transform: skewX(-15deg) translateX(50px);
@@ -216,7 +215,7 @@ h2 {
   position: relative;
   float: right;
   width: 65%;
-  margin: 50px 0 0;
+  margin: 100px 0 0;
   padding: 50px 0 50px 200px;
   z-index: 1;
 }
@@ -241,6 +240,7 @@ h2 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.2;
+  letter-spacing: 0.1em;
   color: #fff;
 }
 
@@ -249,8 +249,8 @@ h2 {
   margin: 0 0 0 60px;
   color: #fff;
   font-weight: normal;
-  font-size: 52.8px;
-  font-size: 3.3rem;
+  font-size: 59.2px;
+  font-size: 3.7rem;
   letter-spacing: 0.1em;
 }
 
@@ -370,8 +370,8 @@ h2 {
 
 .wrap_info {
   width: 50%;
-  padding: 65px 5%;
-  background: #1f2844;
+  padding: 70px 5%;
+  background: #284181;
 }
 
 .title_info {
@@ -395,7 +395,7 @@ h2 {
   position: absolute;
   top: 22px;
   left: -60px;
-  width: 40px;
+  width: 35px;
   height: 2px;
   background: #fff;
 }
@@ -406,7 +406,7 @@ h2 {
   position: absolute;
   top: 22px;
   right: -60px;
-  width: 40px;
+  width: 35px;
   height: 2px;
   background: #fff;
 }
@@ -416,12 +416,13 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 20px;
-  padding: 10px 0;
+  padding: 5px 0 20px;
   border-bottom: dashed 1px #ddd;
 }
 
 .wrap_info dl dt {
   width: 20%;
+  margin: 2px 0 0;
   font-size: 20.8px;
   font-size: 1.3rem;
   color: #fff;
@@ -429,7 +430,7 @@ h2 {
 
 .wrap_info dl dd {
   width: 75%;
-  margin: 0 0 0 5%;
+  margin: 0 0 0 2%;
 }
 
 .wrap_info dl dd a {
@@ -477,7 +478,7 @@ h2 {
 
 .wrap_blog {
   width: 50%;
-  padding: 65px 5%;
+  padding: 70px 5%;
 }
 
 .title_blog {
@@ -574,6 +575,112 @@ h2 {
   padding: 3px 8px;
   font-size: 17.6px;
   font-size: 1.1rem;
+}
+
+/* -------
+リクルート
+------- */
+.wrap_recruit {
+  margin: 110px 0 0;
+}
+
+.wrap_recruit p {
+  text-align: center;
+}
+
+.wrap_recruit p:nth-of-type(1) {
+  margin: 0 0 5px;
+  font-size: 44.8px;
+  font-size: 2.8rem;
+}
+
+.wrap_recruit p:nth-of-type(2) {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.wrap_recruit p:nth-of-type(3) {
+  font-size: 64px;
+  font-size: 4.0rem;
+}
+
+.title_recruit {
+  position: relative;
+  margin: 0 0 40px;
+  text-align: center;
+  color: #1f2844;
+  font-weight: normal;
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+}
+
+.title_recruit span {
+  position: relative;
+}
+
+.title_recruit span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -40px;
+  width: 25px;
+  height: 2px;
+  background: #1f2844;
+}
+
+/* -------
+ギャラリー
+------- */
+.gallery_upper {
+  position: relative;
+  margin: 20px 0 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.gallery_upper:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 120%;
+  height: 100px;
+  background: #fff;
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.gallery_upper img {
+  height: auto;
+}
+
+.gallery_lower {
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.gallery_lower:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  width: 120%;
+  height: 100px;
+  background: #fff;
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.gallery_lower img {
+  height: auto;
 }
 
 @media only screen and (max-width: 768px) {

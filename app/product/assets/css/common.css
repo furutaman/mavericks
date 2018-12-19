@@ -994,7 +994,7 @@ body {
 header {
   position: relative;
   margin: 72px 0 0 0;
-  padding: 0 66px;
+  padding: 0 70px;
 }
 
 .logo {
@@ -1043,7 +1043,7 @@ header {
 .gn_twitter {
   position: absolute;
   right: 75px;
-  bottom: -45px;
+  bottom: -44px;
 }
 
 .gn_twitter img {
@@ -1053,7 +1053,7 @@ header {
 .gn_fb {
   position: absolute;
   right: 39px;
-  bottom: -45px;
+  bottom: -44px;
 }
 
 .gn_fb img {
@@ -1063,7 +1063,7 @@ header {
 .gn_insta {
   position: absolute;
   right: 3px;
-  bottom: -45px;
+  bottom: -44px;
 }
 
 .gn_insta img {
@@ -1102,8 +1102,8 @@ header {
   margin: 13px 0 0 0;
   border: solid 15px #fff;
   background: #1f2844;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .gn--clone.active {
@@ -1174,8 +1174,8 @@ NavBox, ハンバーガーアイコン
   position: fixed;
   top: 0;
   right: -50px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .6s;
+  transition: .6s;
   z-index: 2;
 }
 
@@ -1325,6 +1325,7 @@ SNSボタン（nav-box）
 footer
 ------- */
 footer {
+  margin: 150px 0 0;
   padding: 60px 0 10px;
   background: #1f2844;
 }
