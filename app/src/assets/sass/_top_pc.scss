@@ -1,5 +1,414 @@
-$pc:  "only screen and (min-width:768px)";
-
+$pc:  "only screen and (min-width:769px)";
+$color-base: #1f2844;/* rgba(31,40,40,1) */
 @media #{$pc} {
+}
 
+
+/* -------
+共通
+------- */
+h2 {
+  font-family: 'futura_bk_btbook';
+}
+.btn_more {
+  position: relative;
+  display: block;
+  width: 164px;
+  height: 40px;
+  margin: 60px auto 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  font-family: 'futura_bk_btbook';
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-left: solid 1px $color-base;
+    border-bottom: solid 1px $color-base;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-top: solid 1px $color-base;
+    border-right: solid 1px $color-base;
+  }
+}
+
+
+/* -------
+メインイメージ
+------- */
+.wrap_main-img {
+  padding: 0 40px;
+}
+.main-img {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  margin: 45px 0 0;
+  background: url('../img/img_main.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-img_info {
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ width: 520px;
+ background: #fff;
+ font-size: 1.3rem;
+}
+.arrow_downward {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 64px;
+  float: left;
+  border: solid 1px $color-base;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    width: 2px;
+    height: 16px;
+    background: $color-base;
+    transform: scaleX(.5);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border: solid 3px transparent;
+    border-top: solid 6px $color-base;
+  }
+}
+.main-img_info dt {
+  display: block;
+  float: left;
+  width: 110px;
+  height: 64px;
+  border: solid 1px $color-base;
+  border-left: none;
+  text-align: center;
+  line-height: 64px;
+}
+.main-img_info dd {
+  display: block;
+  float: left;
+  width: 365px;
+  height: 64px;
+  padding: 0 0 0 15px;
+  border: solid 1px $color-base;
+  border-left: none;
+  line-height: 64px;
+}
+
+
+/* -------
+コンセプト
+------- */
+.wrap_concept {
+  margin: 40px 0 0;
+  padding: 40px;
+  p {
+    text-align: center;
+  }
+}
+.title_concept {
+  margin: 0 0 0 30px;
+  padding: 13px 0 13px 25px;
+  border-left: solid 3px $color-base;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.concept_logo {
+  margin: 30px 0 0;
+  img {
+    width: 153px;
+  }
+}
+.concept_catch--main {
+  margin: 60px 0 0;
+  font-size: 4.4rem;
+  font-weight: bold;
+}
+.concept_catch--sub {
+  margin: 40px 0 0;
+  font-size: 1.8rem;
+  font-family: serif;
+  letter-spacing: 0.1em;
+}
+.concept_lead {
+  margin: 30px 0 0;
+  font-size: 1.5rem;
+  line-height: 2.0;
+  letter-spacing: 0.1em;
+}
+
+
+
+/* -------
+メンバー
+------- */
+.wrap_member {
+  position: relative;
+  overflow: hidden;
+}
+.member_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 350px;
+  background: url('../img/img_member.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 350px;
+    background: #fff;
+    transform: skewX(-15deg) translateX(50px);
+  }
+}
+.member_right {
+  position: relative;
+  float: right;
+  width: 65%;
+  margin: 50px 0 0;
+  padding: 50px 0 50px 200px;
+  z-index: 1;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24,40,121,0.7);
+    transform: skewX(-15deg) translateX(70px);
+    z-index: -1;
+  }
+  p {
+    margin: 40px 0 0;
+    font-size: 1.5rem;
+    line-height: 2.2;
+    color: #fff;
+  }
+}
+.title_member {
+  position: relative;
+  margin: 0 0 0 60px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 3.3rem;
+  letter-spacing: 0.1em;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: 90px;
+    width: 70px;
+    height: 3px;
+    background: #fff;
+  }
+}
+.btn_more--white {
+  position: relative;
+  display: block;
+  width: 164px;
+  height: 40px;
+  margin: 60px 0 0 90px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.3rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-family: 'futura_bk_btbook';
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-left: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #fff;
+  }
+}
+
+
+/* -------
+サービス
+------- */
+.wrap_service {
+  display: flex;
+  justify-content: center;
+  margin: 150px 0 0;
+}
+.service_left {
+  width: 40%;
+  margin: 60px 30px 0 0;
+  p {
+    margin: 50px 0 0;
+    font-size: 1.5rem;
+    line-height: 2.2;
+  }
+}
+.service_right {
+  width: 33%;
+  min-height: 500px;
+  margin: 0 0 30px 60px;
+  background: url('../img/img_service.jpg') no-repeat;
+  background-size: contain;
+}
+.title_service {
+  position: relative;
+  text-align: center;
+  font-size: 4.0rem;
+  color: $color-base;
+  letter-spacing: 0.1em;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 4px;
+    background: $color-base;
+  }
+}
+
+
+/* -------
+インフォメーション & ブログ
+------- */
+.wrap_info-and-blog {
+  display: flex;
+}
+.wrap_info {
+  width: 50%;
+  padding: 65px 5%;
+  background: $color-base;
+}
+.title_info {
+  position: relative;
+  margin: 0 0 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  font-size: 3.3rem;
+  letter-spacing: 0.1em;
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 22px;
+      left: -60px;
+      width: 40px;
+      height: 2px;
+      background: #fff;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 22px;
+      right: -60px;
+      width: 40px;
+      height: 2px;
+      background: #fff;
+    }
+  }
+}
+.wrap_info {
+  dl {
+    display: flex;
+    margin: 0 0 20px;
+    padding: 10px 0;
+    border-bottom: dashed 1px #ddd;
+    dt {
+      width: 20%;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+    dd {
+      width: 75%;
+      margin: 0 0 0 5%;
+      a {
+      font-size: 1.3rem;
+      color: #fff;
+      }
+    }
+  }
+}
+.btn_more--white--center {
+  position: relative;
+  display: block;
+  width: 164px;
+  height: 40px;
+  margin: 60px auto;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.3rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-family: 'futura_bk_btbook';
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-left: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #fff;
+  }
+}
+.wrap_blog {
+  width: 50%;
 }
