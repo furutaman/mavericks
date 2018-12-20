@@ -2,11 +2,37 @@ $sp: "only screen and (max-width:768px) ";
 
 @media #{$sp} {
 
-	.wrap_main_img {
-	  padding: 0 10px;
-	}
-	.main_img {
-		margin: 25px 0 0;
-	}
+/* -------
+メインイメージ
+------- */
+.wrap_main-img {
+	margin: 20px 0 0;
+  padding: 0 10px;
+}
+.main-img_info {
+	width: 100%;
+}
+.arrow_downward {
+	display: none;
+}
+.main-img_info dl {
+	display: flex;
+}
+.main-img_info dt {
+	width: 20%;
+	min-width: 100px;
+	height: auto;
+	padding: 10px 0;
+	border-left: solid 1px $color-base;
+	line-height: 1.6;
+}
+.main-img_info dd {
+	width: 80%;
+	max-width: 80%;
+	padding: 10px 20px;
+	height: auto;
+	line-height: 1.6;
+}
+
 
 }

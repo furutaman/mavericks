@@ -8,7 +8,6 @@ jQuery(function($){
 });
 
 
-
 /* -------
 ハンガーバーアイコンのクリックイベント
 ------- */
@@ -66,5 +65,23 @@ jQuery(function($){
       $('#js-nav-box').removeClass('active');
   }
   });
+
+});
+
+
+/* -------
+mainImageをfirst Viewで全画面に
+------- */
+jQuery(function($){
+
+  var h;　//mainImgに設定する高さ
+  var h_st;　//mainImgのY座標
+  var gap = 20;　//mainImg下部の余白
+
+	$(window).on('load resize',function() {
+      h_st = $('#js-main-img').offset().top;
+      h = $(window).height() - h_st - gap;
+	    $("#js-main-img").css("height", h + "px");
+	});
 
 });

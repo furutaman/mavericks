@@ -53,6 +53,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(31,40,40,0.2);
+  z-index: 2;
 }
 
 /* -------
@@ -128,6 +129,7 @@ header {
   border: solid 15px #fff;
   background: $color-base;
 	transition: .6s;
+  z-index: 3;
 }
 .gn--clone.active {
   right: 0;
