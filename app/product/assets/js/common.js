@@ -43,7 +43,6 @@ jQuery(function($){
       check = 0;
     }
 
-    console.log(scrollpos);
   });
 
 });
