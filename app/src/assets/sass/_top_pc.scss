@@ -210,9 +210,9 @@ h2 {
   left: 0;
   width: 85%;
   height: 500px;
-  background: url('../img/img_member.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url('../img/img_member.jpg') $color-base no-repeat;
+  background-size: 1000px 100%;
+  background-position: center right;
   &::after {
     content: "";
     display: block;

@@ -284,10 +284,10 @@ h2 {
   left: 0;
   width: 85%;
   height: 500px;
-  background: url("../img/img_member.jpg") no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
+  background: url("../img/img_member.jpg") #1f2844 no-repeat;
+  -webkit-background-size: 1000px 100%;
+          background-size: 1000px 100%;
+  background-position: center right;
 }
 
 .member_left:after {
